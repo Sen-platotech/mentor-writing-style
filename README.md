@@ -2,7 +2,7 @@
 
 > 上传一位学者（通常是你导师）的若干论文，自动学其文风，产出一份**既读得懂、又能照着写**的写作风格指南（style-guide）。**专为中文人文社科论文设计。**
 >
-> *A Claude skill for the humanities & social sciences: learn a scholar's academic writing style from their corpus and distill it into an operational style guide.*
+> *A writing-style distillation skill for AI coding agents (Codex, Claude Code, Cursor, Kimi Code, etc.), designed for the humanities & social sciences: learn a scholar's academic writing style from their corpus and distill it into an operational style guide.*
 
 ## 为什么是人文社科，为什么可行
 
@@ -24,10 +24,10 @@
 ## 怎么用
 
 1. 把目标作者的论文（PDF/DOCX/TXT）放进一个文件夹。
-2. 对 Claude 说，例如：「学习这个文件夹里我导师的写作风格，总结成可套用的规范」。
-3. Claude 会：列清单 → **作者分档并请你确认**（谁是导师/学生、哪几年是本人巅峰）→ 抽取文本 → 脚本量化扫描 → 精读高权重篇目 → 产出 `<作者>文风_style-guide.md` → 回原文逐字核对。
+2. 对 AI 编码代理（如 Codex、Cursor、Claude Code、Kimi Code 等）说，例如：「学习这个文件夹里我导师的写作风格，总结成可套用的规范」。
+3. 代理会：列清单 → **作者分档并请你确认**（谁是导师/学生、哪几年是本人巅峰）→ 抽取文本 → 脚本量化扫描 → 精读高权重篇目 → 产出 `<作者>文风_style-guide.md` → 回原文逐字核对。
 
-> 提示：文件名带上 `作者 - 年份 - 标题` 更利于自动分档；师生关系、黄金年段直接告诉 Claude 最准。
+> 提示：文件名带上 `作者 - 年份 - 标题` 更利于自动分档；师生关系、黄金年段直接告诉代理最准。
 
 ## 你会得到什么
 
@@ -37,7 +37,7 @@
 
 ## 安装
 
-- **Claude Cowork / Claude Code**：把本目录作为 skill 安装（或双击随附的 `mentor-writing-style.skill`），亦可放入项目的 `.claude/skills/` 下。
+把本目录放入项目的 skills 目录下（如 Codex 的 `.codex/skills/`、Claude Code 的 `.claude/skills/`、Cursor 的 `.cursor/rules/` 等）；或按各代理的 skill 安装方式导入。
 - 依赖：`pdftotext`（poppler）为主，`markitdown` 兜底（处理 docx / 无文本层 PDF）。
 
 ## 目录结构
